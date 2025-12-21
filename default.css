@@ -1,10 +1,11 @@
-header {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main {
-  display: block;
-  clear: both;
+header {
+  width: 100%;
 }
 
 nav {
@@ -17,14 +18,11 @@ nav {
   flex-direction: row;
   align-items: center;
   padding: 10px 20px;
+  margin: 0;
 }
 
 .nav-links li {
   margin-right: 20px;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
 }
 
 .nav-links li a {
@@ -36,5 +34,15 @@ nav {
 .logo {
   border-radius: 25%;
   height: 40px;
-  vertical-align: middle;
+  width: auto;
+  display: block;
+}
+
+main {
+  display: block;
+  clear: both;
+}
+
+footer {
+  text-align: center;
 }
