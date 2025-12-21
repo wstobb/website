@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-nav {
-  float: right;
-}
-
 .nav-links {
   list-style: none;
 }
