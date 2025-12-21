@@ -3,13 +3,15 @@ title: Simple Arch Linux base install
 layout: default
 ---
 
-# Preface
+# Simple Arch Linux base install
+
+## Preface
 
 - This guide aims to create a simple and secure base Arch Linux installation.
 - This will serve as a great and solid base for future tutorials.
 - It is not intended for first time users of Arch Linux.
 
-# Goals
+## Goals
 
 - Rootfs encryption
 - BRTFS
@@ -17,17 +19,17 @@ layout: default
 - LTS kernel
 - No bootloader
 
-# Prerequisites
+## Prerequisites
 
 - Live environment
 - Configured Networking
 - SSH (Optional)
 
-# Phases
+## Phases
 
-## Partitioning
+### Partitioning
 
-### FDisk
+#### FDisk
 
 After selecting the target disk, open it with fdisk.
 
@@ -78,7 +80,7 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 
-### Formatting
+#### Formatting
 
 Format EFI as VFAT.
 
@@ -113,7 +115,7 @@ Format cryptroot as BTRFS.
 mkfs.btrfs -L ROOT /dev/mapper/root
 ```
 
-### BTRFS
+#### BTRFS
 
 Mount BTRFS root.
 
@@ -128,7 +130,7 @@ btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
 ```
 
-### Mounting
+#### Mounting
 
 Mount BTRFS.
 
@@ -145,9 +147,9 @@ mkdir /mnt/efi
 mount -L EFI /mnt/efi
 ```
 
-## Install
+### Install
 
-### Pacstrap
+#### Pacstrap
 
 Install base packages.
 
@@ -155,21 +157,21 @@ Install base packages.
 pacstrap -K /mnt base base-devel linux-lts linux-lts-headers linux-firmware btrfs-progs efibootmgr networkmanager firewalld sudo vim cryptsetup
 ```
 
-### Filesystem Table
+#### Filesystem Table
 
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-### Chroot
+#### Chroot
 
 ```
 arch-chroot /mnt
 ```
 
-## Configuration
+### Configuration
 
-### System
+#### System
 
 Set timezone.
 
@@ -202,7 +204,7 @@ Set hostname in /etc/hostname.
 arch
 ```
 
-### Users
+#### Users
 
 Add sudoer user.
 
@@ -228,7 +230,7 @@ Uncomment this line.
 %wheel ALL=(ALL:ALL) ALL
 ```
 
-### Services
+#### Services
 
 Enable essential services.
 
@@ -236,7 +238,7 @@ Enable essential services.
 systemctl enable firewalld.service systemd-timesyncd.service NetworkManager.service
 ```
 
-### Kernel
+#### Kernel
 
 Find the UUID of the encrypted volume.
 
@@ -252,7 +254,7 @@ rw loglevel=3 cryptdevice=UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX:root root=/d
 
 Replace "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" with the encrypted volume UUID.
 
-### UKIs
+#### UKIs
 
 Create paths for UKIs
 
@@ -286,7 +288,7 @@ Generate UKIs.
 mkinitcpio -P
 ```
 
-### EFI
+#### EFI
 
 Configure efibootmgr.
 
