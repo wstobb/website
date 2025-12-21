@@ -21,17 +21,16 @@ main *:last-child {
   margin-bottom: 0;
 }
 
-table {
-  border: #353535, 2px;
-}
-
-tr {
-  border-color: #353535, 2px;
-}
-
+table,
+th,
 td {
-  border-color: #353535, 2px;
-  padding: 10px;
+  border: 1px solid #353535;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
 }
 
 ul {
