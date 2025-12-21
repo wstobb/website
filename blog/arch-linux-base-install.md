@@ -32,11 +32,11 @@ Partition scheme
 
 <table>
     <tr>
-        <th colspan="4">Block Devce</th>
+        <th colspan="2">Block Devce</th>
     </tr>
     <tr>
         <td>EFI - 900M</td>
-        <td colspan="3">Root - Rest</td>
+        <td>Root - Rest of disk</td>
     </tr>
 </table>
 
