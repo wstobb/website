@@ -21,6 +21,19 @@ main *:last-child {
   margin-bottom: 0;
 }
 
+table {
+  border-color: #353535;
+}
+
+tr {
+  border-color: #353535;
+}
+
+td {
+  border-color: #353535;
+  padding: 10px;
+}
+
 ul {
   margin-left: 20px;
 }
