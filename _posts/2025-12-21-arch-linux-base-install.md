@@ -1,9 +1,9 @@
 ---
-title: Simple Arch Linux base install
-layout: default
+layout: post
+title: "Simple Arch Linux base install"
+date: 2025-12-21 16:22:32 -0500
+permalink: /blog/arch-linux-base-install
 ---
-
-# Simple Arch Linux base install
 
 ## Preface
 
