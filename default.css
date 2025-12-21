@@ -14,6 +14,11 @@ header {
 
 main {
   background-color: #161616;
+  padding-top: 5px;
+}
+
+ul {
+  margin-left: 10px;
 }
 
 h1 {
@@ -48,6 +53,7 @@ p {
   background-color: #353535;
   padding: 5px;
   margin: 10px;
+  border-radius: 5px;
 }
 
 code {
@@ -62,6 +68,9 @@ code {
 footer {
   background-color: #353535;
   color: #f2f4f8;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
 }
 
 .nav-links {
@@ -73,7 +82,9 @@ footer {
 }
 
 .nav-links li {
-  margin: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .nav-links li a {
@@ -103,10 +114,4 @@ footer {
 
 #link5 {
   color: #2dc7c4;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  margin: 0;
 }
