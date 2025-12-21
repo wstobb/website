@@ -16,8 +16,32 @@ main {
   background-color: #161616;
 }
 
+h1 {
+  color: #be95ff;
+}
+
+h2 {
+  color: #25be6a;
+  margin: 3px;
+}
+
+h3 {
+  color: #ee5396;
+  margin: 3px;
+}
+
+h4 {
+  color: #33b1ff;
+  margin: 3px;
+}
+
+h5 {
+  color: #2dc7c4;
+  margin: 3px;
+}
+
 p {
-  font-family: sans-serif;
+  margin: 5px;
 }
 
 .highlight {
