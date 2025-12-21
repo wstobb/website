@@ -9,26 +9,32 @@
   </head>
   <body>
     <header>
-      <nav>
+      <div class="nav-bar">
         <ul class="nav-links">
           <li>
-            <a href="/index"
-              ><img src="/static/logo.png" alt="My logo" class="logo"
-            /></a>
+            <a id="link1" href="/index">Home</a>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <a id="link2" href="/blog">Blog</a>
           </li>
           <li>
-            <a href="https://youtube.com/@scrambalicious" target="_blank"
+            <a
+              id="link3"
+              href="https://youtube.com/@scrambalicious"
+              target="_blank"
               >Youtube</a
             >
           </li>
           <li>
-            <a href="https://github.com/wstobb" target="_blank">Github</a>
+            <a id="link4" href="https://github.com/wstobb" target="_blank"
+              >Github</a
+            >
+          </li>
+          <li>
+            <a id="link5" href="https://github.com/wstobb/website">Source</a>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main>{{ content }}</main>
     <footer>
