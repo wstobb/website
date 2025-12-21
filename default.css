@@ -17,6 +17,10 @@ main {
   padding-top: 5px;
 }
 
+main *:last-child {
+  margin-bottom: 0;
+}
+
 ul {
   margin-left: 20px;
 }
