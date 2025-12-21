@@ -1,5 +1,4 @@
 header {
-  display: block;
   width: 100%;
 }
 
@@ -8,12 +7,24 @@ main {
   clear: both;
 }
 
+nav {
+  width: 100%;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 20px;
   padding: 10px 20px;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
 }
 
 .nav-links li a {
@@ -24,4 +35,6 @@ main {
 
 .logo {
   border-radius: 25%;
+  height: 40px;
+  vertical-align: middle;
 }
