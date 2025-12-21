@@ -32,7 +32,7 @@ Partition scheme
 
 <table>
     <tr>
-        <th colspan="2">Block Devce</th>
+        <th colspan="2">Block Device</th>
     </tr>
     <tr>
         <td>EFI - 900M</td>
