@@ -8,7 +8,6 @@ layout: default
 ## Preface
 
 - This guide aims to create a simple and secure base Arch Linux installation.
-- This will serve as a great and solid base for future tutorials.
 - It is not intended for first time users of Arch Linux.
 
 ## Goals
@@ -28,6 +27,18 @@ layout: default
 ## Phases
 
 ### Partitioning
+
+Partition scheme
+
+<table>
+    <tr>
+        <th colspan="4">Block Devce</th>
+    </tr>
+    <tr>
+        <td>EFI - 900M</td>
+        <td colspan="3">Root - Rest</td>
+    </tr>
+</table>
 
 #### FDisk
 
