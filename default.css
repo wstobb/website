@@ -3,6 +3,16 @@
   padding: 0;
 }
 
+header {
+  display: block;
+  width: 100%;
+}
+
+main {
+  display: block;
+  clear: both;
+}
+
 .nav-links {
   list-style: none;
 }
