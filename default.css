@@ -68,6 +68,7 @@ code {
 .nav-bar {
   background-color: #353535;
   width: 100%;
+  overflow: scroll;
 }
 
 footer {
