@@ -15,11 +15,14 @@ p {
   font-family: sans-serif;
 }
 
-code {
+.highlight {
   background-color: #353535;
-  color: #f2f4f8;
   padding: 5px;
   margin: 10px;
+}
+
+code {
+  color: #f2f4f8;
 }
 
 .nav-bar {
