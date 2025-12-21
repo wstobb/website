@@ -21,10 +21,6 @@ main *:last-child {
   margin-bottom: 0;
 }
 
-table {
-  border-radius: 5px;
-}
-
 table,
 th,
 td {
