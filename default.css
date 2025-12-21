@@ -22,15 +22,15 @@ main *:last-child {
 }
 
 table {
-  border-color: #353535;
+  border: #353535, 2px;
 }
 
 tr {
-  border-color: #353535;
+  border-color: #353535, 2px;
 }
 
 td {
-  border-color: #353535;
+  border-color: #353535, 2px;
   padding: 10px;
 }
 
