@@ -306,3 +306,5 @@ Configure efibootmgr.
 ```
 efibootmgr --create --disk /dev/sdX --part 1 --label "Linux" --loader '\EFI\Linux\arch-linux-lts.efi' --unicode
 ```
+
+### Exit and reboot!
