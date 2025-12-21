@@ -1,7 +1,6 @@
 ---
 title: Simple Arch Linux base install
 layout: default
-stylesheet: ../article.css
 ---
 
 # Simple Arch Linux base install
