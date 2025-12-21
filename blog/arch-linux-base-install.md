@@ -1,3 +1,8 @@
+---
+title: Simple Arch Linux base install
+layout: default
+---
+
 # Preface
 
 - This guide aims to create a simple and secure base Arch Linux installation.
