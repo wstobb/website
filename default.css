@@ -68,7 +68,7 @@ p {
 .highlight {
   background-color: #353535;
   padding: 5px;
-  margin: 10px;
+  margin: 5x;
   border-radius: 5px;
   overflow: scroll;
 }
@@ -107,7 +107,7 @@ footer {
 
 .nav-links li a {
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 5px 5px;
   display: inline-block;
   align-content: center;
   font-size: 20px;
