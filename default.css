@@ -30,4 +30,5 @@ main {
 
 .logo {
   width: 50px;
+  border-radius: 25%;
 }
