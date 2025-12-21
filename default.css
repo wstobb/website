@@ -17,7 +17,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 0;
 }
 
@@ -27,7 +27,7 @@ nav {
 
 .nav-links li a {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 10px;
   display: inline-block;
 }
 
@@ -36,10 +36,6 @@ nav {
   height: 50px;
   width: auto;
   display: block;
-}
-
-main {
-  clear: both;
 }
 
 footer {
