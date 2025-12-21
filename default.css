@@ -5,10 +5,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
+  color: #f2f4f8;
 }
 
 header {
   width: 100%;
+}
+
+main {
+  background-color: #161616;
 }
 
 p {
