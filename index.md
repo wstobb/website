@@ -1,4 +1,4 @@
 ---
 layout: home
-title: "wstobb.net | Home"
+title: 'wstobb.net | Home'
 ---

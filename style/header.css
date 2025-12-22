@@ -1,10 +1,5 @@
-header {
-  width: 100%;
-}
-
 .nav-bar {
-  background-color: #353535;
-  width: 100%;
+  background-color: var(--background-2);
   overflow: scroll;
 }
 
@@ -31,22 +26,22 @@ header {
   font-weight: bold;
 }
 
-#link1 {
-  color: #be95ff;
+#home-link {
+  color: var(--magenta);
 }
 
-#link2 {
-  color: #25be6a;
+#youtube-link {
+  color: var(--red);
 }
 
-#link3 {
-  color: #ee5396;
+#github-link {
+  color: var(--green);
 }
 
-#link4 {
-  color: #33b1ff;
+#source-link {
+  color: var(--cyan);
 }
 
-#link5 {
-  color: #2dc7c4;
+#rss-link {
+  color: var(--yellow);
 }
