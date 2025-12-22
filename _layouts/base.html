@@ -8,34 +8,8 @@
     <link rel="icon" href="/favicon.png" />
   </head>
   <body>
-    <header>
-      <div class="nav-bar">
-        <ul class="nav-links">
-          <li>
-            <a id="link1" href="/index">Home</a>
-          </li>
-          <li>
-            <a
-              id="link2"
-              href="https://youtube.com/@scrambalicious"
-              target="_blank"
-              >Youtube</a
-            >
-          </li>
-          <li>
-            <a id="link3" href="https://github.com/wstobb" target="_blank"
-              >Github</a
-            >
-          </li>
-          <li>
-            <a id="link4" href="https://github.com/wstobb/website">Source</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+    {%- include header.html -%}
     <main>{{ content }}</main>
-    <footer>
-      <p>&copy; 2025 William Stobb. GPL-3.0</p>
-    </footer>
+    {%- include footer.html -%}
   </body>
 </html>

@@ -11,10 +11,6 @@ html {
   background-color: #353535;
 }
 
-header {
-  width: 100%;
-}
-
 main {
   background-color: #161616;
   padding-top: 10px;
@@ -94,62 +90,4 @@ code {
   margin: 5x;
   border-radius: 5px;
   overflow: scroll;
-}
-
-.nav-bar {
-  background-color: #353535;
-  width: 100%;
-  overflow: scroll;
-}
-
-footer {
-  background-color: #353535;
-  color: #f2f4f8;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  background-attachment: fixed;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0;
-}
-
-.nav-links li {
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  padding: 5px 5px;
-  display: inline-block;
-  align-content: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#link1 {
-  color: #be95ff;
-}
-
-#link2 {
-  color: #25be6a;
-}
-
-#link3 {
-  color: #ee5396;
-}
-
-#link4 {
-  color: #33b1ff;
-}
-
-#link5 {
-  color: #2dc7c4;
 }
