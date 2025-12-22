@@ -2,7 +2,8 @@
 layout: post
 title: "Simple Arch Linux base install"
 date: 2025-12-21 16:22:32 -0500
-permalink: /blog/arch-linux-base-install
+categories: [linux, install-guide]
+tags: [arch-linux, advanced]
 ---
 
 ## Preface
@@ -44,7 +45,7 @@ Partition scheme
 
 After selecting the target disk, open it with fdisk.
 
-```
+```bash
 fdisk /dev/sdX
 ```
 
@@ -95,34 +96,25 @@ Syncing disks.
 
 Format EFI as VFAT.
 
-```
+```bash
 mkfs.vfat -F32 -n EFI /dev/sdX1
 ```
 
 Encrypt root.
 
-```
+```bash
 cryptsetup luksFormat /dev/sdX2  
-
-WARNING!
-========
-This will overwrite data on /dev/sdX2 irrevocably.
-
-Are you sure? (Type 'yes' in capital letters): YES
-Enter passphrase for /dev/sdX2:  
-Verify passphrase:
 ```
 
 Open cryptroot.
 
-```
+```bash
 cryptsetup open /dev/sdX2 root
-Enter passphrase for /dev/sdX2:
 ```
 
 Format cryptroot as BTRFS.
 
-```
+```bash
 mkfs.btrfs -L ROOT /dev/mapper/root
 ```
 
@@ -130,13 +122,13 @@ mkfs.btrfs -L ROOT /dev/mapper/root
 
 Mount BTRFS root.
 
-```
+```bash
 mount -L ROOT /mnt
 ```
 
 Create subvolumes.
 
-```
+```bash
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
 ```
@@ -145,7 +137,7 @@ btrfs subvolume create /mnt/@home
 
 Mount BTRFS.
 
-```
+```bash
 mount -o compress=zstd,subvol=@ /dev/mapper/root /mnt
 mkdir /mnt/home
 mount -o compress=zstd,subvol=@home /dev/mapper/root /mnt/home
@@ -153,7 +145,7 @@ mount -o compress=zstd,subvol=@home /dev/mapper/root /mnt/home
 
 Mount EFI.
 
-```
+```bash
 mkdir /mnt/efi
 mount -L EFI /mnt/efi
 ```
@@ -164,19 +156,19 @@ mount -L EFI /mnt/efi
 
 Install base packages.
 
-```
+```bash
 pacstrap -K /mnt base base-devel linux-lts linux-lts-headers linux-firmware btrfs-progs efibootmgr networkmanager firewalld sudo vim cryptsetup
 ```
 
 #### Filesystem Table
 
-```
+```bash
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 #### Chroot
 
-```
+```bash
 arch-chroot /mnt
 ```
 
@@ -186,14 +178,14 @@ arch-chroot /mnt
 
 Set timezone.
 
-```
+```bash
 ln -sf /usr/share/zoneinfo/Your/Location /etc/localtime
 hwclock --systohc
 ```
 
 Set your locale in /etc/locale.gen (Most likely en_US.UTF-8) and run:
 
-```
+```bash
 locale-gen
 ```
 
@@ -211,27 +203,27 @@ KEYMAP=us
 
 Set hostname in /etc/hostname.
 
-```
-arch
+```bash
+echo arch >> /etc/hostname
 ```
 
 #### Users
 
 Add sudoer user.
 
-```
+```bash
 useradd -mG wheel user
 ```
 
 Set password.
 
-```
+```bash
 passwd user
 ```
 
 Enable sudoers.
 
-```
+```bash
 EDITOR=vim visudo
 ```
 
@@ -245,7 +237,7 @@ Uncomment this line.
 
 Enable essential services.
 
-```
+```bash
 systemctl enable firewalld.service systemd-timesyncd.service NetworkManager.service
 ```
 
@@ -253,7 +245,7 @@ systemctl enable firewalld.service systemd-timesyncd.service NetworkManager.serv
 
 Find the UUID of the encrypted volume.
 
-```
+```bash
 blkid /dev/sdX2
 ```
 
@@ -269,7 +261,7 @@ Replace "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" with the encrypted volume UUID.
 
 Create paths for UKIs
 
-```
+```bash
 mkdir -p /efi/EFI/Linux
 ```
 
@@ -295,7 +287,7 @@ default_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
 
 Generate UKIs.
 
-```
+```bash
 mkinitcpio -P
 ```
 
@@ -303,7 +295,7 @@ mkinitcpio -P
 
 Configure efibootmgr.
 
-```
+```bash
 efibootmgr --create --disk /dev/sdX --part 1 --label "Linux" --loader '\EFI\Linux\arch-linux-lts.efi' --unicode
 ```
 

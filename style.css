@@ -5,7 +5,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
-  color: #f2f4f8;
+}
+
+html {
+  background-color: #353535;
 }
 
 header {
@@ -14,7 +17,8 @@ header {
 
 main {
   background-color: #161616;
-  padding-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 main *:last-child {
@@ -26,6 +30,19 @@ th,
 td {
   border: 2px solid #353535;
   border-collapse: collapse;
+  color: #f2f4f8;
+}
+
+a {
+  color: #ee5396;
+}
+
+a:visited {
+  color: #be95ff;
+}
+
+a:hover {
+  color: #33b1ff;
 }
 
 th,
@@ -35,6 +52,7 @@ td {
 
 ul {
   margin-left: 20px;
+  color: #f2f4f8;
 }
 
 h1 {
@@ -63,6 +81,11 @@ h5 {
 
 p {
   margin: 5px;
+  color: #f2f4f8;
+}
+
+code {
+  color: #f2f4f8;
 }
 
 .highlight {
@@ -71,10 +94,6 @@ p {
   margin: 5x;
   border-radius: 5px;
   overflow: scroll;
-}
-
-code {
-  color: #f2f4f8;
 }
 
 .nav-bar {
@@ -89,6 +108,7 @@ footer {
   text-align: center;
   padding: 10px;
   margin: 0;
+  background-attachment: fixed;
 }
 
 .nav-links {
