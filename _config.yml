@@ -28,7 +28,6 @@ github_username: wstobb
 youtube_username: "@wstobb"
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 # Exclude from processing.
