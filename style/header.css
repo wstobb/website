@@ -30,6 +30,10 @@
   color: var(--magenta);
 }
 
+#blog-link {
+  color: var(--blue);
+}
+
 #youtube-link {
   color: var(--red);
 }
