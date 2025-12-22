@@ -27,6 +27,8 @@ url: "https://wstobb.net" # the base hostname & protocol for your site, e.g. htt
 github_username: wstobb
 youtube_username: "@wstobb"
 
+permalink: /:categories/:title
+
 # Build settings
 plugins:
   - jekyll-feed
