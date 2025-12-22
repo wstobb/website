@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simple Arch Linux base install"
+title: "Arch Linux: Base Install"
 date: 2025-12-21 16:22:32 -0500
 categories: [install-guide]
 tags: [arch-linux, advanced, linux]
