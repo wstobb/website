@@ -20,6 +20,7 @@
   background-color: var(--background-2);
   height: 35px;
   border-bottom: 5px solid var(--black);
+  overflow: scroll;
 }
 
 .nav-bar {
@@ -59,4 +60,8 @@
 
 #about-link {
   background-color: var(--blue);
+}
+
+#youtube-link {
+  background-color: var(--red);
 }
