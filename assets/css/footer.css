@@ -1,0 +1,32 @@
+.page-footer {
+  background-color: var(--background-2);
+  padding: 10px;
+  height: 60px;
+  border-top: 5px solid var(--black);
+}
+
+.copyright {
+  text-align: center;
+  color: var(--foreground);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-links li a {
+  color: var(--foreground);
+}
+
+.footer-links li a:hover {
+  color: var(--white);
+}

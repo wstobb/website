@@ -1,0 +1,68 @@
+h1 {
+  color: var(--magenta);
+}
+
+h2 {
+  color: var(--green);
+}
+
+h3 {
+  color: var(--blue);
+}
+
+h4 {
+  color: var(--red);
+}
+
+h5 {
+  color: var(--yellow);
+}
+
+p {
+  color: var(--foreground);
+  margin: 5px;
+  margin-left: 10px;
+}
+
+li {
+  color: var(--foreground);
+  margin-left: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 10px;
+}
+
+.highlight {
+  background-color: var(--black);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: scroll;
+  border: 5px solid var(--background-2);
+}
+
+.highlight pre {
+  border: 0px;
+}
+
+code {
+  color: var(--foreground);
+}
+
+table,
+th,
+td {
+  color: var(--foreground);
+  border: 5px solid var(--background-2);
+  background-color: var(--black);
+  border-radius: 5px;
+}
+
+table {
+  border-radius: 10px;
+}

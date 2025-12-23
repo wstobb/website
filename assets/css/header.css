@@ -1,0 +1,62 @@
+.rss-icon,
+.logo {
+  width: 35px;
+  height: auto;
+  border: 5px solid var(--black);
+  border-radius: 5px;
+}
+
+.rss-link {
+  display: flex;
+  align-items: center;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--background-2);
+  height: 35px;
+  border-bottom: 5px solid var(--black);
+}
+
+.nav-bar {
+  margin-left: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.nav-links li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.nav-links li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#home-link {
+  background-color: var(--magenta);
+}
+
+#blog-link {
+  background-color: var(--green);
+}
+
+#about-link {
+  background-color: var(--blue);
+}

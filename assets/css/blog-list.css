@@ -1,0 +1,36 @@
+.blog-block {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.blog-list {
+  list-style: none;
+}
+
+.post-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.post-link {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.post-link:hover {
+  color: var(--magenta);
+}
+
+.post-link:visited {
+  color: var(--blue);
+}
+
+.post-meta {
+  margin-left: 20px;
+  color: var(--foreground);
+}

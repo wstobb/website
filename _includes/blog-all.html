@@ -1,14 +1,7 @@
----
-layout: base
----
-
-<link rel="stylesheet" href="/style/home.css" />
-<div>
-  {% if site.paginate %} {% assign posts = paginator.posts %} {% else %} {% assign posts = site.posts %} {% endif %}
-
-  <h1>Articles</h1>
-
-  <ul>
+<link rel="stylesheet" href="/assets/css/blog-list.css" />
+<div class="blog-block">
+  {% assign posts = site.posts %}
+  <ul class="blog-list">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %} {% for post in posts %}
     <li>
       <div class="post-container">
