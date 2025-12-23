@@ -1,0 +1,24 @@
+.four-o-four,
+.lame {
+  text-align: center;
+}
+
+.four-o-four {
+  font-size: 75px;
+  font-weight: 900;
+  margin: 10px;
+  color: var(--red);
+}
+
+.lame {
+  color: var(--foreground);
+  margin: 10px;
+}
+
+.container {
+  margin: 40px;
+  padding: 15px;
+  background-color: var(--black);
+  border-radius: 20px;
+  border: 5px solid var(--background-2);
+}
