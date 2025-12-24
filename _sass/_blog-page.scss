@@ -1,5 +1,5 @@
 .blog-block {
-  padding: 40px;
+  padding: 30px;
 }
 
 .blog-list {
@@ -15,11 +15,9 @@
       @include flex-center(row);
       .post-link {
         color: $red;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: bold;
-        &:visited {
-          color: $blue;
-        }
+        text-decoration: none;
         &:hover {
           color: $magenta;
         }
