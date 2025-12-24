@@ -1,7 +1,7 @@
 .page-header {
   @include flex-center(row);
   justify-content: space-between;
-  background-image: linear-gradient(to bottom, $background-2, $black);
+  background-image: $block-gradient;
   padding: 0px 5px;
   height: $header-height;
   overflow: scroll;
@@ -28,7 +28,7 @@
     );
     @each $name, $color in $link-colors {
       ##{$name}-link {
-        color: darken($color, 35%);
+        color: darken($color, 40%);
         @include gradient($color, darken($color, 10%));
         &:hover {
           @include gradient(lighten($color, 10%), $color);
