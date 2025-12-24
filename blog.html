@@ -7,15 +7,15 @@ title: 'wstobb.net | Blogs'
 <div class="blog-block">
   {% assign posts = site.posts %}
   <ul class="blog-list">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %} {% for post in posts %}
+    {% assign date_format = "%b %-d, %Y" %} {% for post in posts %}
     <li>
       <div class="post-container">
-        <p>
-          <a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
-        </p>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
+        <div class="post-meta">
+          <span>{{ post.date | date: date_format }}</span>
+          <span class="category">{{ post.categories }}</span>
+        </div>
       </div>
-      {% if site.minima.show_excerpts %} {{ post.excerpt }} {% endif %}
     </li>
     {% endfor %}
   </ul>

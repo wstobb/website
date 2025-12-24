@@ -12,7 +12,11 @@
     background-image: $block-gradient;
     border-radius: 10px;
     .post-container {
-      @include flex-center(row);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       .post-link {
         color: $red;
         font-size: 22px;
@@ -23,8 +27,10 @@
         }
       }
       .post-meta {
-        margin-left: 20px;
         color: $foreground;
+        .category {
+          color: $white;
+        }
       }
     }
   }
