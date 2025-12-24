@@ -20,3 +20,11 @@
 @mixin gradient($color1, $color2) {
   background-image: linear-gradient(to bottom, $color1, $color2);
 }
+
+@mixin footer-link-coloring {
+  color: $foreground;
+  @include link-transition;
+  &:hover {
+    color: $white;
+  }
+}

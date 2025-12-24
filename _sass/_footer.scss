@@ -7,6 +7,9 @@
   overflow: scroll;
   .copyright {
     font-size: 18px;
+    a {
+      @include footer-link-coloring;
+    }
   }
 }
 
@@ -17,11 +20,7 @@
     list-style: none;
     padding: 0px 10px;
     a {
-      color: $foreground;
-      @include link-transition;
-      &:hover {
-        color: $white;
-      }
+      @include footer-link-coloring;
     }
   }
 }
