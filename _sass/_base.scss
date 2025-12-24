@@ -1,0 +1,31 @@
+$base-font-family: 'Fira Code', monospace;
+$base-font-size: 16px !default;
+$base-font-weight: 500 !default;
+
+$background: #161616;
+$foreground: #f2f4f8;
+$background-2: #353535;
+$black: #282828;
+$red: #ee5396;
+$green: #46c880;
+$yellow: #2dc7c4;
+$blue: #8cb6ff;
+$magenta: #a27fd9;
+$cyan: #2b96d9;
+$white: #bebebe;
+
+html {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: calc(100vh - 155px);
+  background-color: $background;
+  padding: 5px;
+}

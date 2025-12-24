@@ -7,18 +7,18 @@
   font-size: 75px;
   font-weight: 900;
   margin: 10px;
-  color: var(--red);
+  color: $red;
 }
 
 .lame {
-  color: var(--foreground);
+  color: $foreground;
   margin: 10px;
 }
 
-.container {
+.four-o-four-container {
   margin: 40px;
   padding: 15px;
-  background-color: var(--black);
+  background-color: $black;
   border-radius: 20px;
-  border: 5px solid var(--background-2);
+  border: 5px solid $background-2;
 }

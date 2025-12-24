@@ -2,7 +2,7 @@
 .logo {
   width: 35px;
   height: auto;
-  border: 5px solid var(--black);
+  border: 5px solid $black;
   border-radius: 5px;
 }
 
@@ -17,9 +17,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: var(--background-2);
+  background-color: $background-2;
   height: 35px;
-  border-bottom: 5px solid var(--black);
+  border-bottom: 5px solid $black;
   overflow: scroll;
 }
 
@@ -44,24 +44,57 @@
 .nav-links li a {
   font-size: 18px;
   text-decoration: none;
-  color: var(--foreground);
+  color: $foreground;
   font-weight: 600;
   padding: 5px;
   border-radius: 5px;
 }
 
 #home-link {
-  background-color: var(--magenta);
+  background-color: $magenta;
 }
 
 #blog-link {
-  background-color: var(--green);
+  background-color: $green;
 }
 
 #about-link {
-  background-color: var(--blue);
+  background-color: $blue;
 }
 
 #youtube-link {
-  background-color: var(--red);
+  background-color: $red;
+}
+
+.page-footer {
+  background-color: $background-2;
+  padding: 10px;
+  height: 60px;
+  border-top: 5px solid $black;
+}
+
+.copyright {
+  text-align: center;
+  color: $foreground;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-links li a {
+  color: $foreground;
+}
+
+.footer-links li a:hover {
+  color: $white;
 }

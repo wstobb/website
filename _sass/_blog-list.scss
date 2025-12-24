@@ -12,26 +12,26 @@
   display: flex;
   align-items: center;
   margin: 10px;
-  background-color: var(--black);
+  background-color: $black;
   padding: 10px;
   border-radius: 10px;
-  border: 5px solid var(--background-2);
+  border: 5px solid $background-2;
 }
 
 .post-link {
-  color: var(--red);
+  color: $red;
   text-decoration: none;
 }
 
 .post-link:hover {
-  color: var(--magenta);
+  color: $magenta;
 }
 
 .post-link:visited {
-  color: var(--blue);
+  color: $blue;
 }
 
 .post-meta {
   margin-left: 20px;
-  color: var(--foreground);
+  color: $foreground;
 }

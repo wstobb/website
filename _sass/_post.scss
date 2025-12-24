@@ -1,0 +1,72 @@
+h1 {
+  color: $magenta;
+}
+
+h2 {
+  color: $green;
+}
+
+h3 {
+  color: $blue;
+}
+
+h4 {
+  color: $red;
+}
+
+h5 {
+  color: $yellow;
+}
+
+p {
+  color: $foreground;
+  margin: 5px;
+  margin-left: 10px;
+}
+
+li {
+  color: $foreground;
+  margin-left: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 10px;
+}
+
+.highlight {
+  background-color: $black;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: scroll;
+  border: 5px solid $background-2;
+}
+
+.highlight pre {
+  border: 0px;
+}
+
+code {
+  color: $foreground;
+}
+
+table,
+th,
+td {
+  color: $foreground;
+  border: 5px solid $background-2;
+  background-color: $black;
+  border-radius: 5px;
+}
+
+table {
+  margin: 5px;
+}
+
+table {
+  border-radius: 10px;
+}
