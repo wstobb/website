@@ -1,24 +1,14 @@
-.four-o-four,
-.lame {
-  text-align: center;
-}
-
-.four-o-four {
-  font-size: 75px;
-  font-weight: 900;
-  margin: 10px;
-  color: $red;
-}
-
-.lame {
-  color: $foreground;
-  margin: 10px;
-}
-
 .four-o-four-container {
-  margin: 40px;
-  padding: 15px;
-  background-color: $black;
-  border-radius: 20px;
-  border: 5px solid $background-2;
+  @include flex-center(column);
+  padding: 30px;
+  .four-o-four {
+    font-size: 60px;
+    font-weight: bold;
+    color: $red;
+  }
+  .lame {
+    font-size: 20px;
+    color: $foreground;
+    padding: 20px;
+  }
 }

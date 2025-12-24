@@ -1,0 +1,24 @@
+.page-footer {
+  @include flex-center(column);
+  justify-content: space-around;
+  background-color: $background-2;
+  border-top: $border-style;
+  height: $footer-height;
+  color: $foreground;
+}
+
+.footer-links {
+  @include flex-center(row);
+  justify-content: center;
+  li {
+    list-style: none;
+    margin: 0px 10px;
+    a {
+      color: $foreground;
+      @include link-transition;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

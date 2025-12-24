@@ -1,0 +1,33 @@
+.blog-block {
+  padding: 40px;
+}
+
+.blog-list {
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: 15px;
+    background-color: $black;
+    border-radius: 10px;
+    .post-container {
+      @include flex-center(row);
+      .post-link {
+        color: $red;
+        font-size: 25px;
+        font-weight: bold;
+        &:visited {
+          color: $blue;
+        }
+        &:hover {
+          color: $magenta;
+        }
+      }
+      .post-meta {
+        margin-left: 20px;
+        color: $foreground;
+      }
+    }
+  }
+}

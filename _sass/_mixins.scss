@@ -1,0 +1,14 @@
+@mixin flex-center($direction) {
+  display: flex;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin image-link-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin link-transition($property: all) {
+  transition: $property 0.3s ease;
+}

@@ -1,68 +1,67 @@
-h1 {
-  color: $magenta;
-}
+.post-content {
+  padding: 10px;
 
-h2 {
-  color: $green;
-}
+  $heading-colors: (
+    h1: $magenta,
+    h2: $green,
+    h3: $blue,
+    h4: $red,
+    h5: $yellow,
+  );
 
-h3 {
-  color: $blue;
-}
+  @each $heading, $color in $heading-colors {
+    #{$heading} {
+      color: $color;
+    }
+  }
 
-h4 {
-  color: $red;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: 5px;
+  }
 
-h5 {
-  color: $yellow;
-}
+  p,
+  code,
+  li,
+  td,
+  tr {
+    color: $foreground;
+    padding: 5px;
+  }
 
-p {
-  color: $foreground;
-  margin: 5px;
-  margin-left: 10px;
-}
+  li {
+    margin-left: 20px;
+  }
 
-li {
-  color: $foreground;
-  margin-left: 25px;
-}
+  .highlight {
+    background-color: $background-2;
+    padding: 5px;
+    border: $border-style;
+    margin: 5px;
+    border-radius: 10px;
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 10px;
-}
+    .highlight {
+      padding: 0;
+      border: 0;
+      margin: 0;
+      overflow: auto;
+    }
+  }
 
-.code {
-  background-color: $black;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 10px;
-  overflow: scroll;
-  border: 5px solid $background-2;
-}
+  table {
+    margin: 5px;
+    border-collapse: collapse;
+  }
 
-code {
-  color: $foreground;
-}
-
-table,
-th,
-td {
-  color: $foreground;
-  border: 5px solid $background-2;
-  background-color: $black;
-  border-radius: 5px;
-}
-
-table {
-  margin: 5px;
-}
-
-table {
-  border-radius: 10px;
+  table,
+  th,
+  td {
+    color: $foreground;
+    border: $border-style;
+    background-color: $background-2;
+    border-radius: 10px;
+  }
 }

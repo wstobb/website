@@ -45,23 +45,17 @@ Partition scheme
 
 After selecting the target disk, open it with fdisk.
 
-{: .code}
-
 ```bash
 fdisk /dev/sdX
 ```
 
 Create a new GPT.
 
-{: .code}
-
 ```
 Command (m for help): g
 ```
 
 Create the EFI partition.
-
-{: .code}
 
 ```
 Command (m for help): n
@@ -80,8 +74,6 @@ Changed type of partition 'Linux filesystem' to 'EFI System'.
 
 Create the root partition.
 
-{: .code}
-
 ```
 Command (m for help): n
 Partition number (2-128, default 2): 2
@@ -92,8 +84,6 @@ Created a new partition 2 of type 'Linux filesystem' and of size X GiB.
 ```
 
 Finally, write the changes to disk.
-
-{: .code}
 
 ```
 Command (m for help): w
@@ -106,15 +96,11 @@ Syncing disks.
 
 Format EFI as VFAT.
 
-{: .code}
-
 ```bash
 mkfs.vfat -F32 -n EFI /dev/sdX1
 ```
 
 Encrypt root.
-
-{: .code}
 
 ```bash
 cryptsetup luksFormat /dev/sdX2  
@@ -122,15 +108,11 @@ cryptsetup luksFormat /dev/sdX2  
 
 Open cryptroot.
 
-{: .code}
-
 ```bash
 cryptsetup open /dev/sdX2 root
 ```
 
 Format cryptroot as BTRFS.
-
-{: .code}
 
 ```bash
 mkfs.btrfs -L ROOT /dev/mapper/root
@@ -140,15 +122,11 @@ mkfs.btrfs -L ROOT /dev/mapper/root
 
 Mount BTRFS root.
 
-{: .code}
-
 ```bash
 mount -L ROOT /mnt
 ```
 
 Create subvolumes.
-
-{: .code}
 
 ```bash
 btrfs subvolume create /mnt/@
@@ -159,8 +137,6 @@ btrfs subvolume create /mnt/@home
 
 Mount BTRFS.
 
-{: .code}
-
 ```bash
 mount -o compress=zstd,subvol=@ /dev/mapper/root /mnt
 mkdir /mnt/home
@@ -168,8 +144,6 @@ mount -o compress=zstd,subvol=@home /dev/mapper/root /mnt/home
 ```
 
 Mount EFI.
-
-{: .code}
 
 ```bash
 mkdir /mnt/efi
@@ -182,23 +156,17 @@ mount -L EFI /mnt/efi
 
 Install base packages.
 
-{: .code}
-
 ```bash
 pacstrap -K /mnt base base-devel linux-lts linux-lts-headers linux-firmware btrfs-progs efibootmgr networkmanager firewalld sudo vim cryptsetup
 ```
 
 #### Filesystem Table
 
-{: .code}
-
 ```bash
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 #### Chroot
-
-{: .code}
 
 ```bash
 arch-chroot /mnt
@@ -210,8 +178,6 @@ arch-chroot /mnt
 
 Set timezone.
 
-{: .code}
-
 ```bash
 ln -sf /usr/share/zoneinfo/Your/Location /etc/localtime
 hwclock --systohc
@@ -219,15 +185,11 @@ hwclock --systohc
 
 Set your locale in /etc/locale.gen (Most likely en_US.UTF-8) and run:
 
-{: .code}
-
 ```bash
 locale-gen
 ```
 
 Set LANG in /etc/locale.conf.
-
-{: .code}
 
 ```
 LANG=en_US.UTF-8
@@ -235,15 +197,11 @@ LANG=en_US.UTF-8
 
 Set KEYMAP in /etc/vconsole.conf.
 
-{: .code}
-
 ```
 KEYMAP=us
 ```
 
 Set hostname in /etc/hostname.
-
-{: .code}
 
 ```bash
 echo arch >> /etc/hostname
@@ -253,15 +211,11 @@ echo arch >> /etc/hostname
 
 Add sudoer user.
 
-{: .code}
-
 ```bash
 useradd -mG wheel user
 ```
 
 Set password.
-
-{: .code}
 
 ```bash
 passwd user
@@ -269,15 +223,11 @@ passwd user
 
 Enable sudoers.
 
-{: .code}
-
 ```bash
 EDITOR=vim visudo
 ```
 
 Uncomment this line.
-
-{: .code}
 
 ```
 %wheel ALL=(ALL:ALL) ALL
@@ -287,8 +237,6 @@ Uncomment this line.
 
 Enable essential services.
 
-{: .code}
-
 ```bash
 systemctl enable firewalld.service systemd-timesyncd.service NetworkManager.service
 ```
@@ -297,15 +245,11 @@ systemctl enable firewalld.service systemd-timesyncd.service NetworkManager.serv
 
 Find the UUID of the encrypted volume.
 
-{: .code}
-
 ```bash
 blkid /dev/sdX2
 ```
 
 Create the /etc/kernel/cmdline and add:
-
-{: .code}
 
 ```
 rw loglevel=3 cryptdevice=UUID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX:root root=/dev/mapper/root rootflags=subvol=@
@@ -317,23 +261,17 @@ Replace "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" with the encrypted volume UUID.
 
 Create paths for UKIs
 
-{: .code}
-
 ```bash
 mkdir -p /efi/EFI/Linux
 ```
 
 Edit /etc/mkinitcpio.conf and change the hooks section to this.
 
-{: .code}
-
 ```
 HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
 ```
 
 Edit /etc/mkinitcpio.d/linux-lts.preset.
-
-{: .code}
 
 ```
 ALL_config="/etc/mkinitcpio.conf"
@@ -349,8 +287,6 @@ default_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
 
 Generate UKIs.
 
-{: .code}
-
 ```bash
 mkinitcpio -P
 ```
@@ -358,8 +294,6 @@ mkinitcpio -P
 #### EFI
 
 Configure efibootmgr.
-
-{: .code}
 
 ```bash
 efibootmgr --create --disk /dev/sdX --part 1 --label "Linux" --loader '\EFI\Linux\arch-linux-lts.efi' --unicode

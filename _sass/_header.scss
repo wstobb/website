@@ -1,0 +1,49 @@
+.page-header {
+  @include flex-center(row);
+  justify-content: space-between;
+  background-color: $background-2;
+  border-bottom: $border-style;
+  padding: 0px 5px;
+  height: $header-height;
+}
+
+.nav-links {
+  @include flex-center(row);
+  li {
+    list-style: none;
+    margin-right: 10px;
+    a {
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 5px;
+      color: $foreground;
+      font-weight: bold;
+      font-size: 20px;
+      @include link-transition;
+    }
+    $link-colors: (
+      'home': $magenta,
+      'blog': $green,
+      'about': $blue,
+      'videos': $red,
+    );
+    @each $name, $color in $link-colors {
+      ##{$name}-link {
+        background-color: $color;
+        &:hover {
+          background-color: lighten($color, 10%);
+        }
+      }
+    }
+  }
+}
+
+.header-icon {
+  @include image-link-center;
+  border-radius: 5px;
+  border: $border-style;
+  img {
+    height: 30px;
+    width: auto;
+  }
+}
