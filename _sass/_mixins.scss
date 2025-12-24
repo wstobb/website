@@ -28,3 +28,10 @@
     color: $white;
   }
 }
+
+@mixin link-coloring {
+  color: $red;
+  &:hover {
+    color: $magenta;
+  }
+}

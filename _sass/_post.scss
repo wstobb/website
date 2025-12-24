@@ -37,4 +37,7 @@
       border-radius: 10px;
     }
   }
+  a {
+    @include link-coloring;
+  }
 }

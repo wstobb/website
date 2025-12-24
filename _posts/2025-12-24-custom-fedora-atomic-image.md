@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Custom Fedora Atomic Image'
-date: 2025-12-24 14:28:30 -0500
+date: 2025-12-24
 categories: [custom-linux]
 tags: [fedora-linux, advanced, linux]
 ---

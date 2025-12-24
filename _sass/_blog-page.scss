@@ -11,6 +11,10 @@
     padding: 15px;
     background-image: $block-gradient;
     border-radius: 10px;
+    margin: 15px 0px;
+    &:first-child {
+      margin: 0;
+    }
     .post-container {
       display: flex;
       flex-direction: row;
@@ -18,13 +22,10 @@
       align-items: center;
       width: 100%;
       .post-link {
-        color: $red;
+        @include link-coloring;
         font-size: 22px;
         font-weight: bold;
         text-decoration: none;
-        &:hover {
-          color: $magenta;
-        }
       }
       .post-meta {
         color: $foreground;
