@@ -1,10 +1,10 @@
 .page-header {
   @include flex-center(row);
   justify-content: space-between;
-  background-color: $background-2;
-  border-bottom: $border-style;
+  background-image: linear-gradient(to bottom, $background-2, $black);
   padding: 0px 5px;
   height: $header-height;
+  overflow: scroll;
 }
 
 .nav-links {
@@ -13,10 +13,9 @@
     list-style: none;
     margin-right: 10px;
     a {
-      text-decoration: none;
       padding: 5px;
+      text-decoration: none;
       border-radius: 5px;
-      color: $foreground;
       font-weight: bold;
       font-size: 20px;
       @include link-transition;
@@ -29,9 +28,10 @@
     );
     @each $name, $color in $link-colors {
       ##{$name}-link {
-        background-color: $color;
+        color: darken($color, 35%);
+        @include gradient($color, darken($color, 10%));
         &:hover {
-          background-color: lighten($color, 10%);
+          @include gradient(lighten($color, 10%), $color);
         }
       }
     }

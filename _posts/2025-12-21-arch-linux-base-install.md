@@ -29,18 +29,6 @@ tags: [arch-linux, advanced, linux]
 
 ### Partitioning
 
-Partition scheme
-
-<table>
-    <tr>
-        <th colspan="2">Block Device</th>
-    </tr>
-    <tr>
-        <td>EFI - 900M</td>
-        <td>Root - Rest of disk</td>
-    </tr>
-</table>
-
 #### FDisk
 
 After selecting the target disk, open it with fdisk.

@@ -1,10 +1,13 @@
 .page-footer {
   @include flex-center(column);
   justify-content: space-around;
-  background-color: $background-2;
-  border-top: $border-style;
+  background-image: linear-gradient(to top, $background-2, $black);
   height: $footer-height;
   color: $foreground;
+  overflow: scroll;
+  .copyright {
+    font-size: 18px;
+  }
 }
 
 .footer-links {
@@ -12,7 +15,7 @@
   justify-content: center;
   li {
     list-style: none;
-    margin: 0px 10px;
+    padding: 0px 10px;
     a {
       color: $foreground;
       @include link-transition;

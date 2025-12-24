@@ -9,7 +9,7 @@
     align-items: flex-start;
     list-style: none;
     padding: 15px;
-    background-color: $black;
+    background-image: $block-gradient;
     border-radius: 10px;
     .post-container {
       @include flex-center(row);

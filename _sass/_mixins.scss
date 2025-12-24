@@ -12,3 +12,11 @@
 @mixin link-transition($property: all) {
   transition: $property 0.3s ease;
 }
+
+@mixin border($color) {
+  border: 5px solid $color;
+}
+
+@mixin gradient($color1, $color2) {
+  background-image: linear-gradient(to bottom, $color1, $color2);
+}

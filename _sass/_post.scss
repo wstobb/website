@@ -1,6 +1,5 @@
 .post-content {
   padding: 10px;
-
   $heading-colors: (
     h1: $magenta,
     h2: $green,
@@ -8,60 +7,37 @@
     h4: $red,
     h5: $yellow,
   );
-
   @each $heading, $color in $heading-colors {
     #{$heading} {
       color: $color;
     }
   }
-
   h1,
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  p {
     padding: 5px;
   }
-
   p,
   code,
-  li,
-  td,
-  tr {
+  li {
     color: $foreground;
-    padding: 5px;
   }
-
   li {
     margin-left: 20px;
   }
-
   .highlight {
-    background-color: $background-2;
-    padding: 5px;
-    border: $border-style;
+    background-image: $block-gradient;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
-
+    overflow: scroll;
     .highlight {
       padding: 0;
       border: 0;
       margin: 0;
-      overflow: auto;
     }
-  }
-
-  table {
-    margin: 5px;
-    border-collapse: collapse;
-  }
-
-  table,
-  th,
-  td {
-    color: $foreground;
-    border: $border-style;
-    background-color: $background-2;
-    border-radius: 10px;
   }
 }
