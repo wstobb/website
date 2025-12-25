@@ -36,6 +36,7 @@ Create a directory structure populated with files that resembles this:
 .
 ├── .github/
 │   └── workflows/
+│       └── build.yml
 ├── config/
 │   ├── disable_services.list
 │   ├── enable_services.list
